@@ -22,13 +22,14 @@ https://gateway-test.kebu.io
 Base URL:
 https://gateway-test.kebu.io
 
-#1. POST /api/account/v2/auth/token
-##Description:
+# 1. POST /api/account/v2/auth/token
+## Description:
 This endpoint allows users to obtain an authentication token by providing their username, password, and category (e.g., CLIENT).
 
-##Request Body:
+## Request Body:
 
 {
+
   "username": "0111483335",
   
   "password": "perminus12",
@@ -36,49 +37,56 @@ This endpoint allows users to obtain an authentication token by providing their 
   "deviceId": null,
   
   "category": "CLIENT"
+
 }
 
-##Response:
+## Response:
 
 {
+
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlU002a...FZbGdjIn09",
   
   "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ"
+  
 }
 
 
-##2. POST /api/account/v2/token/refresh
-#Description:
+## 2. POST /api/account/v2/token/refresh
+## Description:
 This endpoint allows users to refresh their access token using the provided refresh token. It also requires a category (e.g., CLIENT).
 
-##Request Body:
+## Request Body:
 
 {
+
   "refreshToken": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ",
   
   "category": "CLIENT"
+
 }
 
-##Response:
+## Response:
 {
+
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlU002a...FZbGdjIn09",
   
   "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ"
+
 }
 
 
-##To clarify the documentation for your API endpoints and improve its structure, I'll rewrite it more clearly while keeping all the essential details intact. Here’s how the documentation for these endpoints can be organized:
+## To clarify the documentation for your API endpoints and improve its structure, I'll rewrite it more clearly while keeping all the essential details intact. Here’s how the documentation for these endpoints can be organized:
 
 
-##1. POST /api/account/v2/auth/token
-##Description:
-##This endpoint allows users to obtain an authentication token by providing their username, password, and category (e.g., CLIENT).
+## 1. POST /api/account/v2/auth/token
+## Description:
+## This endpoint allows users to obtain an authentication token by providing their username, password, and category (e.g., CLIENT).
 
-##Request Body:
+## Request Body:
 
-json
 
 {
+
   "username": "0111483335",
   
   "password": "perminus12",
@@ -86,21 +94,28 @@ json
   "deviceId": null,
   
   "category": "CLIENT"
+
 }
-##Response:
+
+## Response:
 
 
 {
+
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlU002a...FZbGdjIn09",
   
   "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ"
+
 }
 
-##2. POST /api/account/v2/token/refresh
-##Description:
+
+## 2. POST /api/account/v2/token/refresh
+
+## Description:
+
 This endpoint allows users to refresh their access token using the provided refresh token. It also requires a category (e.g., CLIENT).
 
-##Request Body:
+## Request Body:
 
 {
   "refreshToken": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ",
@@ -108,30 +123,36 @@ This endpoint allows users to refresh their access token using the provided refr
   "category": "CLIENT"
 }
 
-##Response:
+## Response:
 
 
 {
+
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlU002a...FZbGdjIn09",
   
   "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4YTNiNzYyNi00ZjYyLTQwOWMtYWY2Ni03NGFjMWVhYThhYmIifQ"
+
 }
 
-##3. GET /api/v1/profile/public/error/codes
+## 3. GET /api/v1/profile/public/error/codes
 
-##Description:
+## Description:
 
 This endpoint fetches a list of predefined error codes that the system may return during operations.
 
-###Request Body:
+## Request Body:
 
-##No request body is needed for this endpoint.
+## No request body is needed for this endpoint.
 
-##Response:
+## Response:
 
 {
-  "errorCodes": [
+
+  "errorCodes": 
+  
+  [
 {
+
   "LA-001": "Similar transaction in progress. Try again later!"
   
     },
@@ -154,9 +175,9 @@ This endpoint fetches a list of predefined error codes that the system may retur
 
 
 
-##Endpoints:
+## Endpoints:
 
-##The above three endpoints are key parts of the authentication and error handling system.
+## The above three endpoints are key parts of the authentication and error handling system.
 
 POST /api/account/v2/auth/token: Get an authentication token with username, password, and category.
 
